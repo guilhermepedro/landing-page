@@ -1,0 +1,168 @@
+<mat-toolbar class="header">
+    <span>Alanir Junior | Personal Trainer</span>
+    <span class="spacer"></span>
+    <nav>
+      <a mat-button href="#inicio">Início</a>
+      <a mat-button href="#sobre">Sobre</a>
+      <a mat-button href="#servicos">Serviços</a>
+      <a mat-button href="#depoimentos">Depoimentos</a>
+      <a mat-button href="#contato">Contato</a>
+    </nav>
+  </mat-toolbar>
+  
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <h1 class="first">Transforme seu corpo,<br><span class="highlight">transforme sua vida</span></h1>
+      <p>Treinamento personalizado para alcançar seus objetivos de forma eficiente e sustentável</p>
+      <button mat-raised-button class="cta-button">Agende uma consulta gratuita</button>
+    </div>
+    <img src="assets/trainer.jpg" alt="Personal Trainer em ação" class="hero-image">
+  </section>
+  
+  <section id="sobre" class="about-section">
+    <div class="about-content">
+      <span class="section-label">Sobre mim</span>
+      <h2>Personal Trainer Certificado</h2>
+      <p>Especializado em transformação corporal e bem-estar, trabalho com metodologias comprovadas para ajudar você a alcançar seus objetivos de forma segura e eficiente.</p>
+      
+      <ul class="credentials-list">
+        <li>Certificação Internacional em Personal Training</li>
+        <li>Especialização em Nutrição Esportiva</li>
+        <li>Experiência com diversos perfis de alunos</li>
+        <li>Metodologia personalizada para cada objetivo</li>
+      </ul>
+    </div>
+    <div class="experience-badge">
+      <span class="number">10+</span>
+      <span class="text">Anos de Experiência</span>
+    </div>
+  </section>
+  
+  <section id="servicos" class="services-section">
+    <div class="section-header">
+        <span class="section-label">Serviços</span>
+        <h2>Como posso ajudar você</h2>
+    </div>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon-wrapper">
+                <mat-icon>fitness_center</mat-icon>
+            </div>
+            <p class="service-description">Programas de treino adaptados às suas necessidades e objetivos específicos.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-wrapper">
+                <mat-icon>restaurant</mat-icon>
+            </div>
+            <p class="service-description">Orientação nutricional personalizada para maximizar seus resultados.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-wrapper">
+                <mat-icon>computer</mat-icon>
+            </div>
+            <p class="service-description">Suporte e orientação à distância para manter seu progresso constante.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-wrapper">
+                <mat-icon>monitor_heart</mat-icon>
+            </div>
+            <p class="service-description">Análise completa do seu condicionamento físico e composição corporal.</p>
+        </div>
+    </div>
+  </section>
+  
+  <section id="depoimentos" class="testimonials-section">
+    <div class="section-header">
+        <span class="section-label">Depoimentos</span>
+        <h2>O que dizem meus alunos</h2>
+    </div>
+
+    <div class="testimonials-carousel">
+        <button class="nav-button prev" (click)="previousTestimonial()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+
+        <div class="testimonial-card" [@slideAnimation]="currentIndex">
+            <div class="quote-icon">
+                <mat-icon>format_quote</mat-icon>
+            </div>
+            <p class="testimonial-text">{{ testimonials[currentIndex].text }}</p>
+            <div class="testimonial-author">
+                <img [src]="testimonials[currentIndex].image" [alt]="testimonials[currentIndex].name">
+                <div class="author-info">
+                    <h4>{{ testimonials[currentIndex].name }}</h4>
+                    <p>{{ testimonials[currentIndex].role }}</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-button next" (click)="nextTestimonial()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+  </section>
+  
+  <section id="contato" class="contact-section">
+    <div class="section-header">
+        <span class="section-label">Contato</span>
+        <h2 style="color: aliceblue">Vamos conversar?</h2>
+    </div>
+
+    <div class="contact-container">
+        <!-- Informações de Contato -->
+        <div class="contact-info">
+            <h3>Informações de Contato</h3>
+            <p>Entre em contato para agendar sua consulta gratuita ou tirar dúvidas sobre os serviços.</p>
+            
+            <div class="info-items">
+                <div class="info-item">
+                    <mat-icon>phone</mat-icon>
+                    <span>+55 (27) 99934-5844</span>
+                </div>
+                <div class="info-item">
+                    <mat-icon>email</mat-icon>
+                    <span>contato@teste.com</span>
+                </div>
+                <div class="info-item">
+                    <mat-icon>location_on</mat-icon>
+                    <span>Linhares, ES</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <form class="contact-form" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput name="name" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput type="email" name="email" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Mensagem</mat-label>
+                <textarea matInput rows="5" name="message" required></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button class="submit-button" type="submit">
+                Enviar Mensagem
+                <mat-icon>send</mat-icon>
+            </button>
+        </form>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="social-links">
+        <a href="#" target="_blank"><mat-icon>facebook</mat-icon></a>
+        <a href="#" target="_blank"><mat-icon>instagram</mat-icon></a>
+    </div>
+    <p>&copy; 2025 Alanir Junior | Personal Trainer. Todos os direitos reservados.</p>
+  </footer>
