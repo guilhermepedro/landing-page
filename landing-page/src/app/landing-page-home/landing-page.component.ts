@@ -52,21 +52,10 @@ export class LandingPageComponent {
     this.currentIndex = this.currentIndex < this.testimonials.length - 1 ? this.currentIndex + 1 : 0;
   }
 
-  contactForm = {
-    name: '',
-    email: '',
-    message: ''
-  };
-
-  onSubmit() {
-    // Aqui você pode implementar a lógica de envio do formulário
-    console.log('Formulário enviado:', this.contactForm);
-    
-    // Resetar o formulário após o envio
-    this.contactForm = {
-      name: '',
-      email: '',
-      message: ''
-    };
+  openWhatsApp() {
+    const phoneNumber = '5527999345844';
+    const message = 'Olá! Gostaria de saber mais sobre seus serviços de personal trainer.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   }
 }

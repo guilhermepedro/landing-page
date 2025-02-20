@@ -22,19 +22,22 @@
   <section id="sobre" class="about-section">
     <div class="about-content">
       <span class="section-label">Sobre mim</span>
-      <h2>Personal Trainer Certificado</h2>
+      <h2>Personal Trainer Registro CREF: 011255-ES</h2>
       <p>Especializado em transformação corporal e bem-estar, trabalho com metodologias comprovadas para ajudar você a alcançar seus objetivos de forma segura e eficiente.</p>
       
       <ul class="credentials-list">
-        <li>Certificação Internacional em Personal Training</li>
-        <li>Especialização em Nutrição Esportiva</li>
         <li>Experiência com diversos perfis de alunos</li>
         <li>Metodologia personalizada para cada objetivo</li>
+        <li>Treino personalizado, criação de rotina e acompanhamentos periódicos de resultados</li>
       </ul>
     </div>
-    <div class="experience-badge">
-      <span class="number">10+</span>
-      <span class="text">Anos de Experiência</span>
+
+    <div class="about-media">
+      <img src="assets/alanir.jpeg" alt="Personal Trainer Alanir Junior" class="about-image">
+      <div class="experience-badge">
+        <span class="number">3+</span>
+        <span class="text">Anos de Experiência</span>
+      </div>
     </div>
   </section>
   
@@ -70,7 +73,7 @@
             <div class="icon-wrapper">
                 <mat-icon>monitor_heart</mat-icon>
             </div>
-            <p class="service-description">Análise completa do seu condicionamento físico e composição corporal.</p>
+            <p class="service-description">Análise completa semanal do seu condicionamento físico e composição corporal.</p>
         </div>
     </div>
   </section>
@@ -151,10 +154,16 @@
                 <textarea matInput rows="5" name="message" required></textarea>
             </mat-form-field>
 
-            <button mat-raised-button class="submit-button" type="submit">
-                Enviar Mensagem
-                <mat-icon>send</mat-icon>
-            </button>
+            <div class="button-group">
+                <button mat-raised-button class="submit-button" type="submit">
+                    Enviar Mensagem
+                    <mat-icon>send</mat-icon>
+                </button>
+                <button mat-raised-button class="whatsapp-button" type="button" (click)="openWhatsApp()">
+                    Conversar no WhatsApp
+                    <mat-icon>whatsapp</mat-icon>
+                </button>
+            </div>
         </form>
     </div>
   </section>
@@ -162,7 +171,7 @@
   <footer class="footer">
     <div class="social-links">
         <a href="#" target="_blank"><mat-icon>facebook</mat-icon></a>
-        <a href="#" target="_blank"><mat-icon>instagram</mat-icon></a>
+        <a href="https://www.instagram.com/alanirjunior/" target="_blank"><mat-icon>instagram</mat-icon></a>
     </div>
     <p>&copy; 2025 Alanir Junior | Personal Trainer. Todos os direitos reservados.</p>
   </footer>

@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -17,7 +16,7 @@ body {
   }
 
   nav a {
-    color: var(#ffffff);
+    color: #ffffff;
     margin-left: 20px;
     text-decoration: none;
     
@@ -92,35 +91,48 @@ body {
 
 /* About Section */
 .about-section {
-  background-color: #ffffff;
-  padding: 100px 10%;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
 }
 
 .about-content {
-  max-width: 800px;
+  flex: 1;
+}
 
-  .section-label {
-    color: black;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    display: block;
-  }
+.about-media {
+  flex: 1;
+  position: relative;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: black;
-  }
+.about-image {
+  width: 100%;
+  height: 900px; // Ajuste conforme necessário
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-  }
+.section-label {
+  color: black;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  opacity: 0.9;
+  margin-bottom: 2rem;
 }
 
 .credentials-list {
@@ -151,25 +163,25 @@ body {
 
 .experience-badge {
   position: absolute;
-  right: 10%;
-  bottom: 50px;
-  background-color: #0d0ac9;
-  padding: 20px;
-  border-radius: 10px;
+  bottom: -20px;
+  right: -20px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 
   .number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: #333;
   }
 
   .text {
     display: block;
     font-size: 0.9rem;
-    color: white;
-    opacity: 0.9;
+    color: #666;
   }
 }
 
@@ -520,4 +532,28 @@ body {
     &.prev { left: -20px; }
     &.next { right: -20px; }
   }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-badge {
+    right: 0;
+  }
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.whatsapp-button {
+    background-color: #25D366 !important;
+    color: white !important;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E !important;
 }
