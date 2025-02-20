@@ -116,7 +116,6 @@
     </div>
 
     <div class="contact-container">
-        <!-- Informações de Contato -->
         <div class="contact-info">
             <h3>Informações de Contato</h3>
             <p>Entre em contato para agendar uma avaliação ou tirar dúvidas sobre os serviços.</p>
@@ -137,14 +136,12 @@
             </div>
         </div>
 
-        <form class="contact-form">
-            <div class="button-group">
-                <button mat-raised-button class="whatsapp-button" type="button" (click)="openWhatsApp()">
-                    Conversar no WhatsApp
-                    <mat-icon>whatsapp</mat-icon>
-                </button>
-            </div>
-        </form>
+        <div class="button-container">
+            <button mat-raised-button class="whatsapp-button" type="button" (click)="openWhatsApp()">
+                Conversar no WhatsApp
+                <mat-icon>whatsapp</mat-icon>
+            </button>
+        </div>
     </div>
   </section>
   
