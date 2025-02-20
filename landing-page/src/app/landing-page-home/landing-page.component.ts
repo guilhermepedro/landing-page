@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -24,22 +24,22 @@ export class LandingPageComponent {
 
   testimonials = [
     {
-      text: 'Metodologia profissional e atenção personalizada. Superou todas as minhas expectativas!',
+      text: 'Exemplo',
       name: 'Guilherme',
       role: 'Desenvolvedor',
-      image: 'assets/testimonials/patricia.jpg'
+      image: 'assets/guilherme.png'
     },
     {
-      text: 'Resultados incríveis em poucos meses. O melhor investimento que já fiz!',
+      text: 'Exemplo',
       name: 'Higor',
       role: 'Empresário',
-      image: 'assets/testimonials/joao.jpg'
+      image: 'assets/higor.png'
     },
     {
-      text: 'Treinos adaptados à minha rotina e objetivos. Superação diária!',
+      text: 'Exemplo',
       name: 'Maykon',
       role: 'Publicitário',
-      image: 'assets/testimonials/maria.jpg'
+      image: 'assets/maykon.png'
     }
   ];
 
@@ -57,5 +57,15 @@ export class LandingPageComponent {
     const message = 'Olá! Gostaria de saber mais sobre seus serviços de personal trainer.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const header = document.querySelector('.header') as HTMLElement;
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   }
 }

@@ -14,7 +14,7 @@
     <div class="hero-content">
       <h1 class="first">Transforme seu corpo,<br><span class="highlight">transforme sua vida</span></h1>
       <p>Treinamento personalizado para alcançar seus objetivos de forma eficiente e sustentável</p>
-      <button mat-raised-button class="cta-button">Agende uma consulta gratuita</button>
+      <button mat-raised-button class="cta-button" (click)="openWhatsApp()">Agende uma avaliação</button>
     </div>
     <img src="assets/trainer.jpg" alt="Personal Trainer em ação" class="hero-image">
   </section>
@@ -26,9 +26,9 @@
       <p>Especializado em transformação corporal e bem-estar, trabalho com metodologias comprovadas para ajudar você a alcançar seus objetivos de forma segura e eficiente.</p>
       
       <ul class="credentials-list">
-        <li>Experiência com diversos perfis de alunos</li>
-        <li>Metodologia personalizada para cada objetivo</li>
-        <li>Treino personalizado, criação de rotina e acompanhamentos periódicos de resultados</li>
+        <li>Experiência com diversos perfis de alunos;</li>
+        <li>Metodologia personalizada para cada objetivo;</li>
+        <li>Treino personalizado, criação de rotina e acompanhamentos periódicos de resultados.</li>
       </ul>
     </div>
 
@@ -119,7 +119,7 @@
         <!-- Informações de Contato -->
         <div class="contact-info">
             <h3>Informações de Contato</h3>
-            <p>Entre em contato para agendar sua consulta gratuita ou tirar dúvidas sobre os serviços.</p>
+            <p>Entre em contato para agendar uma avaliação ou tirar dúvidas sobre os serviços.</p>
             
             <div class="info-items">
                 <div class="info-item">
@@ -137,28 +137,8 @@
             </div>
         </div>
 
-        <!-- Formulário de Contato -->
-        <form class="contact-form" (ngSubmit)="onSubmit()">
-            <mat-form-field appearance="outline">
-                <mat-label>Nome</mat-label>
-                <input matInput name="name" required>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>E-mail</mat-label>
-                <input matInput type="email" name="email" required>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Mensagem</mat-label>
-                <textarea matInput rows="5" name="message" required></textarea>
-            </mat-form-field>
-
+        <form class="contact-form">
             <div class="button-group">
-                <button mat-raised-button class="submit-button" type="submit">
-                    Enviar Mensagem
-                    <mat-icon>send</mat-icon>
-                </button>
                 <button mat-raised-button class="whatsapp-button" type="button" (click)="openWhatsApp()">
                     Conversar no WhatsApp
                     <mat-icon>whatsapp</mat-icon>
