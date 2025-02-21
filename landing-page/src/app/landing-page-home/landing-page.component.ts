@@ -24,22 +24,19 @@ export class LandingPageComponent {
 
   testimonials = [
     {
-      text: 'Exemplo',
-      name: 'Guilherme',
-      role: 'Desenvolvedor',
-      image: 'assets/guilherme.png'
+      text: 'Que treino completo! Totalmente de acordo com as minha necessidades do momento! As novas variações e troca de estímulos me fizeram lembrar de músculos que eu havia esquecido que tinha.',
+      name: 'Kamilla Ananda',
+      image: 'assets/images/kamilla.jpeg'
     },
     {
       text: 'Exemplo',
-      name: 'Higor',
-      role: 'Empresário',
-      image: 'assets/higor.png'
+      name: 'Higor Dor',
+      image: 'assets/images/higor.png'
     },
     {
       text: 'Exemplo',
-      name: 'Maykon',
-      role: 'Publicitário',
-      image: 'assets/maykon.png'
+      name: 'Maykon Barreto',
+      image: 'assets/images/maykon.png'
     }
   ];
 

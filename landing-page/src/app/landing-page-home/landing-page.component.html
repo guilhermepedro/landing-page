@@ -13,10 +13,10 @@
   <section id="inicio" class="hero-section">
     <div class="hero-content">
       <h1 class="first">Transforme seu corpo,<br><span class="highlight">transforme sua vida</span></h1>
-      <p>Treinamento personalizado para alcançar seus objetivos de forma eficiente e sustentável</p>
+      <p>CONSULTORIA ONLINE PARA TODO O BRASIL</p>
       <button mat-raised-button class="cta-button" (click)="openWhatsApp()">Agende uma avaliação</button>
     </div>
-    <img src="assets/trainer.jpg" alt="Personal Trainer em ação" class="hero-image">
+    <img src="assets/images/trainertemplate2.jpeg" alt="Personal Trainer em ação" class="hero-image">
   </section>
   
   <section id="sobre" class="about-section">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="about-media">
-      <img src="assets/alanir.jpeg" alt="Personal Trainer Alanir Junior" class="about-image">
+      <img src="assets/images/alanir.jpeg" alt="Personal Trainer Alanir Junior" class="about-image">
       <div class="experience-badge">
         <span class="number">3+</span>
         <span class="text">Anos de Experiência</span>
@@ -81,7 +81,7 @@
   <section id="depoimentos" class="testimonials-section">
     <div class="section-header">
         <span class="section-label">Depoimentos</span>
-        <h2>O que dizem meus alunos</h2>
+        <h2 style="color: white">O que dizem meus alunos</h2>
     </div>
 
     <div class="testimonials-carousel">
@@ -98,7 +98,6 @@
                 <img [src]="testimonials[currentIndex].image" [alt]="testimonials[currentIndex].name">
                 <div class="author-info">
                     <h4>{{ testimonials[currentIndex].name }}</h4>
-                    <p>{{ testimonials[currentIndex].role }}</p>
                 </div>
             </div>
         </div>
@@ -127,7 +126,7 @@
                 </div>
                 <div class="info-item">
                     <mat-icon>email</mat-icon>
-                    <span>contato@teste.com</span>
+                    <span>alanirjunior@yahoo.com.br</span>
                 </div>
                 <div class="info-item">
                     <mat-icon>location_on</mat-icon>
@@ -147,8 +146,9 @@
   
   <footer class="footer">
     <div class="social-links">
-        <a href="#" target="_blank"><mat-icon>facebook</mat-icon></a>
-        <a href="https://www.instagram.com/alanirjunior/" target="_blank"><mat-icon>instagram</mat-icon></a>
+        <a href="https://www.instagram.com/alanirjunior/" target="_blank" class="social-icon">
+            <mat-icon>home</mat-icon>
+        </a>
     </div>
     <p>&copy; 2025 Alanir Junior | Personal Trainer. Todos os direitos reservados.</p>
   </footer>

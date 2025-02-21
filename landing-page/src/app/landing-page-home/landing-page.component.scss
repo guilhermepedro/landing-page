@@ -22,12 +22,12 @@ body {
     text-decoration: none;
     
     &:hover {
-      color: #1513a0;
+      color: #0b2e74;
     }
   }
 
   &.scrolled {
-    background-color: #0d0ac9 !important;
+    background-color: #06193f !important;
   }
 }
 
@@ -169,7 +169,7 @@ p {
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background-color: #fff;
+  background-color: #06193f;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -179,19 +179,19 @@ p {
     display: block;
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: white;
   }
 
   .text {
     display: block;
     font-size: 0.9rem;
-    color: #666;
+    color: white;
   }
 }
 
 /* Services Section */
 .services-section {
-  background-color: #f5f2f2;
+  background-color: #dadfe7;
   padding: 100px 10%;
 }
 
@@ -433,7 +433,7 @@ p {
 }
 
 .footer {
-  background-color: #0d0ac9;
+  background-color: #06193f;
   padding: 30px 10%;
   text-align: center;
 
@@ -518,11 +518,26 @@ p {
 .whatsapp-button {
     background-color: #25D366 !important;
     color: white !important;
-    padding: 12px 30px !important;
+    padding: 15px 30px !important;
     border-radius: 25px !important;
     font-size: 1.1rem;
 }
 
 .whatsapp-button:hover {
     background-color: #128C7E !important;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  
 }
